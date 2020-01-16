@@ -21,7 +21,7 @@ void loop()
   val1 = val;
   val = map(analogRead(A1), -20,1023, -7,7); // aggiustare i valori estremi per trimmare lo zero centrale
   if ( val != val1 && val >= 0 ) {
-    r = 0;
+    r = 0;                                   // r viene resettato a 0 se il potenziometro viene ruotato troppo velocemente
     f = val;
       if ( f == 0 ) {
         lego.SingleOutput(0, PWM_FLT, RED, CH1);
@@ -50,8 +50,8 @@ void loop()
     delay(100);
   }
   if ( val != val1 && val <= 0 ) {
-    f = 0;
-    r = val*-1;
+    f = 0;                            // f viene resettato a 0 se il potenziometro viene ruotato troppo velocemente
+    r = val*-1;                       // il valore negativo di r viene riportato a positivo
       if ( r == 0 ) {
         lego.SingleOutput(0, PWM_FLT, RED, CH1);
         }
