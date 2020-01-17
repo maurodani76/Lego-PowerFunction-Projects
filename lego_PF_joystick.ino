@@ -1,9 +1,12 @@
 /*
 La seriale è solo per test dei valori riportati.
 */
+
 #include <legopowerfunctions.h>
 
-LEGOPowerFunctions lego(11);
+#define IRLed 11      // pin al quale è collegato il led IR (usare transistor per pilotare il led IR!)
+
+LEGOPowerFunctions lego(IRLed);
 
 int f = 0;
 int r = 0;
@@ -13,7 +16,6 @@ int val = 0;
 void setup()
 {
   // Serial.begin(9600);
-  // pinMode(7, INPUT);
 }
 
 void loop()
