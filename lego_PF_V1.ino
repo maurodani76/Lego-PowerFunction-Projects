@@ -6,6 +6,12 @@ La seriale è solo per test dei valori riportati.
 */
 #include <legopowerfunctions.h>
 
+#define IRLed 11      // pin al quale è collegato il led IR (usare transistor per pilotare il led IR!)
+#define LEFT 9        // pin pulsante LEFT
+#define STOP 8        // pin pulsante STOP
+#define RIGHT 7       // pin pulsante RIGHT
+
+
 LEGOPowerFunctions lego(11);
 
 int f = 0;
@@ -14,15 +20,15 @@ int r = 0;
 void setup()
 {
   // Serial.begin(9600);
-  pinMode(7, INPUT);
-  pinMode(8, INPUT);
-  pinMode(9, INPUT);
+  pinMode(RIGHT, INPUT);
+  pinMode(STOP, INPUT);
+  pinMode(LEFT, INPUT);
  
 }
 
 void loop()
 {
-  if ( digitalRead(7) == HIGH && f < 7) {
+  if ( digitalRead(RIGHT) == HIGH && f < 7) {
     if ( r == 0 ) {
       f = f+1;
       if ( f == 1 ) {
@@ -72,7 +78,7 @@ void loop()
     }
     delay(100);
   }
-  if ( digitalRead(9) == HIGH && r < 7) {
+  if ( digitalRead(LEFT) == HIGH && r < 7) {
     if ( f == 0 ) {
       r = r+1;
       if ( r == 1 ) {
@@ -122,7 +128,7 @@ void loop()
     }
     delay(100);
   }
-  if ( digitalRead(8) == HIGH ) {
+  if ( digitalRead(STOP) == HIGH ) {
     f = 0;
     r = 0;
     lego.SingleOutput(0, PWM_FLT, BLUE, CH4);
