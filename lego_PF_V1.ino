@@ -1,6 +1,8 @@
 /*
 Codice base per aumentare e diminuire il valore di PWM con due pulsanti
 Il pulsante centrale ferma tutto, riportando a 0 i valori delle due variabili
+Il codice prevede che i due pulsanti LEFT e RIGHT aumentino o diminuiscano il PWM verso destra o sinistra partendo dallo 0 centrale
+NON è possibile saltare da valori LEFT a valori RIGHT senza passare per lo ZERO. E' importante per capire il codice!
 
 La seriale è solo per test dei valori riportati.
 */
@@ -28,10 +30,10 @@ void setup()
 
 void loop()
 {
-  if ( digitalRead(RIGHT) == HIGH && f < 7) {
-    if ( r == 0 ) {
-      f = f+1;
-      if ( f == 1 ) {
+  if ( digitalRead(RIGHT) == HIGH && f < 7) {    // decido se il comando deve aumentare il "verso" a destra dallo 0 centrale o riportare a 0 da sinistra
+    if ( r == 0 ) {    // controllo se partiamo dallo 0 verso destra ("r" è impostato a 0...)
+      f = f+1;         // aumento valore pwm verso destra
+      if ( f == 1 ) {  // serie di IF per aumentare i valori a destra
         lego.SingleOutput(0, PWM_FWD1, BLUE, CH4);
         }
       if ( f == 2 ) {
@@ -53,8 +55,8 @@ void loop()
         lego.SingleOutput(0, PWM_FWD7, BLUE, CH4);
         }
     } else {
-        r = r-1;
-      if ( r == 1 ) {
+        r = r-1;  // ... altrimenti il pulsante RIGHT fa diminuire "r" fino a 0
+      if ( r == 1 ) {  // e comanda la diminuzione di pwm verso destra...
         lego.SingleOutput(0, PWM_REV1, BLUE, CH4);
         }
       if ( r == 2 ) {
@@ -78,7 +80,7 @@ void loop()
     }
     delay(100);
   }
-  if ( digitalRead(LEFT) == HIGH && r < 7) {
+  if ( digitalRead(LEFT) == HIGH && r < 7) { // stesso concetto come sopra ma tutto verso sinistra...
     if ( f == 0 ) {
       r = r+1;
       if ( r == 1 ) {
@@ -128,10 +130,10 @@ void loop()
     }
     delay(100);
   }
-  if ( digitalRead(STOP) == HIGH ) {
+  if ( digitalRead(STOP) == HIGH ) {  // la pressione del tasto STOP porta subito a zero entrambi i valori ...
     f = 0;
     r = 0;
-    lego.SingleOutput(0, PWM_FLT, BLUE, CH4);
+    lego.SingleOutput(0, PWM_FLT, BLUE, CH4); // ... e ferma tutto.
   }
   // Serial.print(f);
   // Serial.print(",");
