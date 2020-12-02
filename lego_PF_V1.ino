@@ -4,6 +4,7 @@ Il pulsante centrale ferma tutto, riportando a 0 i valori delle due variabili
 Il codice prevede che i due pulsanti LEFT e RIGHT aumentino o diminuiscano il PWM verso destra o sinistra partendo dallo 0 centrale
 NON è possibile saltare da valori LEFT a valori RIGHT senza passare per lo ZERO. E' importante per capire il codice!
 
+
 La seriale è solo per test dei valori riportati.
 */
 #include <legopowerfunctions.h>
