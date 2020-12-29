@@ -7,7 +7,7 @@ La seriale è solo per test dei valori riportati.
 
 #define IRLed 11      // pin al quale è collegato il led IR (usare transistor per pilotare il led IR!)
 #define LEFT 7        // pin pulsante LEFT
-#define STOP 8        // pin pulsante STOP
+#define STOP 8        // pin pulsante STOP - è da integrare nel codice!
 #define RIGHT 9       // pin pulsante RIGHT
 
 
