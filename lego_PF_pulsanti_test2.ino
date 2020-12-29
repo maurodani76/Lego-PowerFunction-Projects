@@ -18,7 +18,6 @@ Con la funzione while viene implementata una "sosta" sul valore 0 quando uno dei
 
 LEGOPowerFunctions lego(11);
 int speed = 0;
-int prevspeed = 0;
   
 void setup()
 {
