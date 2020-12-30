@@ -4,7 +4,7 @@ Test codes to use arduino as a controller of the Lego PowerFunction system; as a
 
 I wrote the following codes:
 
-Code to manage the 7 PWM levels with 3 buttons: increase or decrease, and stop button. (Upgrading and almost final)
+Code to manage the 7 PWM levels with 3 buttons: increase or decrease, and stop button. (Upgrading and almost final - lego_PF_pulsanti_test_V2.2)
 
 Code to manage the 7 PWM levels with potentiometer: the analogue input from 0 to 1023 is remapped from -7 to 7; this code is long and a bit cumbersome but it works ... I used it for the self-made remote that rotates the crane turret. In the future I will try to improve it with the new leaner code used for the button system.
 
@@ -18,7 +18,7 @@ Il codice base è comunque incluso nel mio repository.
 
 Ho scritto i seguenti codici:
 
-- Codice per gestire i 7 livelli PWM con 3 pulsanti: aumenta o diminuisce, e pulsante stop. (In aggiornamento e quasi definitivo)
+- Codice per gestire i 7 livelli PWM con 3 pulsanti: aumenta o diminuisce, e pulsante stop. (In aggiornamento e quasi definitivo - lego_PF_pulsanti_test_V2.2)
 
 - Codice per gestire i 7 livelli PWM con potenziometro: l'entrata analogica da 0 a 1023 viene rimappata da -7 a 7; questo codice è lungo e un po' farraginoso ma funziona... l'ho utilizzato per il telecomando autocostruito che ruota la torretta della gru. In futuro vedrò di migliorarlo col nuovo codice più snello utilizzato per il sistema a pulsanti.
 
