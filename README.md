@@ -7,3 +7,6 @@ test of lego PF library
 
 Resistenza di caduta per il led IR: 68ohm
 Resistenza per la base del transistor (MPSA06 o BC547...) che pilota il led IR: 1Khom
+
+
+![Lego PF PWM controller con pulsanti](https://user-images.githubusercontent.com/44203381/103346735-3124a600-4a95-11eb-8157-c10a91c48622.png)
