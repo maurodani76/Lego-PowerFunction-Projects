@@ -1,6 +1,7 @@
 # Lego-PF-Projects
 
-Codici di test per utilizzare arduino come controller del sistema Lego PowerFunction; come base ho utilizzato il codice scritto da ... che utilizza un led IR pilotato da arduino.
+Codici di test per utilizzare arduino come controller del sistema Lego PowerFunction; come base ho utilizzato il codice scritto da https://github.com/schultzy51/LEGOPowerFunctions che utilizza un led IR pilotato da arduino.
+Il codice base è comunque incluso nel mio repository.
 
 Ho scritto i seguenti codici:
 
