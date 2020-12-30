@@ -8,7 +8,8 @@ Code to manage the 7 PWM levels with 3 buttons: increase or decrease, and stop b
 
 Code to manage the 7 PWM levels with potentiometer: the analogue input from 0 to 1023 is remapped from -7 to 7; this code is long and a bit cumbersome but it works ... I used it for the self-made remote that rotates the crane turret. In the future I will try to improve it with the new leaner code used for the button system.
 
-Drop resistance for the IR led: 68ohm Resistance for the base of the transistor (MPSA06 or BC547 ...) that drives the IR led: 1Khom
+Drop resistance for the IR led: 68ohm
+Resistance for the base of the transistor (MPSA06 or BC547 ...) that drives the IR led: 1Khom
 
 ---------------------
 
